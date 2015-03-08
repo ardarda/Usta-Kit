@@ -1,0 +1,446 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B4628FA51AACA5B400476A32 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4628FA41AACA5B400476A32 /* main.m */; };
+		B4628FA81AACA5B400476A32 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4628FA71AACA5B400476A32 /* AppDelegate.m */; };
+		B4628FAB1AACA5B400476A32 /* Mobil_Eleman_Takip.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B4628FA91AACA5B400476A32 /* Mobil_Eleman_Takip.xcdatamodeld */; };
+		B4628FAE1AACA5B400476A32 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4628FAD1AACA5B400476A32 /* ViewController.m */; };
+		B4628FB11AACA5B400476A32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4628FAF1AACA5B400476A32 /* Main.storyboard */; };
+		B4628FB31AACA5B400476A32 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4628FB21AACA5B400476A32 /* Images.xcassets */; };
+		B4628FB61AACA5B400476A32 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4628FB41AACA5B400476A32 /* LaunchScreen.xib */; };
+		B4628FC21AACA5B400476A32 /* Mobil_Eleman_TakipTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B4628FC11AACA5B400476A32 /* Mobil_Eleman_TakipTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B4628FBC1AACA5B400476A32 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B4628F971AACA5B400476A32 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4628F9E1AACA5B400476A32;
+			remoteInfo = "Mobil Eleman Takip";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B4628F9F1AACA5B400476A32 /* Mobil Eleman Takip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mobil Eleman Takip.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4628FA31AACA5B400476A32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4628FA41AACA5B400476A32 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B4628FA61AACA5B400476A32 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B4628FA71AACA5B400476A32 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B4628FAA1AACA5B400476A32 /* Mobil_Eleman_Takip.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mobil_Eleman_Takip.xcdatamodel; sourceTree = "<group>"; };
+		B4628FAC1AACA5B400476A32 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B4628FAD1AACA5B400476A32 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B4628FB01AACA5B400476A32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B4628FB21AACA5B400476A32 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B4628FB51AACA5B400476A32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		B4628FBB1AACA5B400476A32 /* Mobil Eleman TakipTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mobil Eleman TakipTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4628FC01AACA5B400476A32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4628FC11AACA5B400476A32 /* Mobil_Eleman_TakipTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Mobil_Eleman_TakipTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B4628F9C1AACA5B400476A32 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4628FB81AACA5B400476A32 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B4628F961AACA5B400476A32 = {
+			isa = PBXGroup;
+			children = (
+				B4628FA11AACA5B400476A32 /* Mobil Eleman Takip */,
+				B4628FBE1AACA5B400476A32 /* Mobil Eleman TakipTests */,
+				B4628FA01AACA5B400476A32 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B4628FA01AACA5B400476A32 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B4628F9F1AACA5B400476A32 /* Mobil Eleman Takip.app */,
+				B4628FBB1AACA5B400476A32 /* Mobil Eleman TakipTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B4628FA11AACA5B400476A32 /* Mobil Eleman Takip */ = {
+			isa = PBXGroup;
+			children = (
+				B4628FA61AACA5B400476A32 /* AppDelegate.h */,
+				B4628FA71AACA5B400476A32 /* AppDelegate.m */,
+				B4628FAC1AACA5B400476A32 /* ViewController.h */,
+				B4628FAD1AACA5B400476A32 /* ViewController.m */,
+				B4628FAF1AACA5B400476A32 /* Main.storyboard */,
+				B4628FB21AACA5B400476A32 /* Images.xcassets */,
+				B4628FB41AACA5B400476A32 /* LaunchScreen.xib */,
+				B4628FA91AACA5B400476A32 /* Mobil_Eleman_Takip.xcdatamodeld */,
+				B4628FA21AACA5B400476A32 /* Supporting Files */,
+			);
+			path = "Mobil Eleman Takip";
+			sourceTree = "<group>";
+		};
+		B4628FA21AACA5B400476A32 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B4628FA31AACA5B400476A32 /* Info.plist */,
+				B4628FA41AACA5B400476A32 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B4628FBE1AACA5B400476A32 /* Mobil Eleman TakipTests */ = {
+			isa = PBXGroup;
+			children = (
+				B4628FC11AACA5B400476A32 /* Mobil_Eleman_TakipTests.m */,
+				B4628FBF1AACA5B400476A32 /* Supporting Files */,
+			);
+			path = "Mobil Eleman TakipTests";
+			sourceTree = "<group>";
+		};
+		B4628FBF1AACA5B400476A32 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B4628FC01AACA5B400476A32 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B4628F9E1AACA5B400476A32 /* Mobil Eleman Takip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4628FC51AACA5B400476A32 /* Build configuration list for PBXNativeTarget "Mobil Eleman Takip" */;
+			buildPhases = (
+				B4628F9B1AACA5B400476A32 /* Sources */,
+				B4628F9C1AACA5B400476A32 /* Frameworks */,
+				B4628F9D1AACA5B400476A32 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Mobil Eleman Takip";
+			productName = "Mobil Eleman Takip";
+			productReference = B4628F9F1AACA5B400476A32 /* Mobil Eleman Takip.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B4628FBA1AACA5B400476A32 /* Mobil Eleman TakipTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4628FC81AACA5B400476A32 /* Build configuration list for PBXNativeTarget "Mobil Eleman TakipTests" */;
+			buildPhases = (
+				B4628FB71AACA5B400476A32 /* Sources */,
+				B4628FB81AACA5B400476A32 /* Frameworks */,
+				B4628FB91AACA5B400476A32 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B4628FBD1AACA5B400476A32 /* PBXTargetDependency */,
+			);
+			name = "Mobil Eleman TakipTests";
+			productName = "Mobil Eleman TakipTests";
+			productReference = B4628FBB1AACA5B400476A32 /* Mobil Eleman TakipTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B4628F971AACA5B400476A32 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Arda Cicek";
+				TargetAttributes = {
+					B4628F9E1AACA5B400476A32 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					B4628FBA1AACA5B400476A32 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = B4628F9E1AACA5B400476A32;
+					};
+				};
+			};
+			buildConfigurationList = B4628F9A1AACA5B400476A32 /* Build configuration list for PBXProject "Mobil Eleman Takip" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B4628F961AACA5B400476A32;
+			productRefGroup = B4628FA01AACA5B400476A32 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B4628F9E1AACA5B400476A32 /* Mobil Eleman Takip */,
+				B4628FBA1AACA5B400476A32 /* Mobil Eleman TakipTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B4628F9D1AACA5B400476A32 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4628FB11AACA5B400476A32 /* Main.storyboard in Resources */,
+				B4628FB61AACA5B400476A32 /* LaunchScreen.xib in Resources */,
+				B4628FB31AACA5B400476A32 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4628FB91AACA5B400476A32 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B4628F9B1AACA5B400476A32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4628FAB1AACA5B400476A32 /* Mobil_Eleman_Takip.xcdatamodeld in Sources */,
+				B4628FA81AACA5B400476A32 /* AppDelegate.m in Sources */,
+				B4628FAE1AACA5B400476A32 /* ViewController.m in Sources */,
+				B4628FA51AACA5B400476A32 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4628FB71AACA5B400476A32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4628FC21AACA5B400476A32 /* Mobil_Eleman_TakipTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B4628FBD1AACA5B400476A32 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B4628F9E1AACA5B400476A32 /* Mobil Eleman Takip */;
+			targetProxy = B4628FBC1AACA5B400476A32 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B4628FAF1AACA5B400476A32 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B4628FB01AACA5B400476A32 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B4628FB41AACA5B400476A32 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B4628FB51AACA5B400476A32 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B4628FC31AACA5B400476A32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B4628FC41AACA5B400476A32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B4628FC61AACA5B400476A32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Mobil Eleman Takip/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B4628FC71AACA5B400476A32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Mobil Eleman Takip/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B4628FC91AACA5B400476A32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Mobil Eleman TakipTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mobil Eleman Takip.app/Mobil Eleman Takip";
+			};
+			name = Debug;
+		};
+		B4628FCA1AACA5B400476A32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Mobil Eleman TakipTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mobil Eleman Takip.app/Mobil Eleman Takip";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B4628F9A1AACA5B400476A32 /* Build configuration list for PBXProject "Mobil Eleman Takip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4628FC31AACA5B400476A32 /* Debug */,
+				B4628FC41AACA5B400476A32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B4628FC51AACA5B400476A32 /* Build configuration list for PBXNativeTarget "Mobil Eleman Takip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4628FC61AACA5B400476A32 /* Debug */,
+				B4628FC71AACA5B400476A32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B4628FC81AACA5B400476A32 /* Build configuration list for PBXNativeTarget "Mobil Eleman TakipTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4628FC91AACA5B400476A32 /* Debug */,
+				B4628FCA1AACA5B400476A32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B4628FA91AACA5B400476A32 /* Mobil_Eleman_Takip.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B4628FAA1AACA5B400476A32 /* Mobil_Eleman_Takip.xcdatamodel */,
+			);
+			currentVersion = B4628FAA1AACA5B400476A32 /* Mobil_Eleman_Takip.xcdatamodel */;
+			path = Mobil_Eleman_Takip.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = B4628F971AACA5B400476A32 /* Project object */;
+}
