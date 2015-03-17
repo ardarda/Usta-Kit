@@ -9,6 +9,7 @@
 #import "ACContext.h"
 #import "WorkerList.h"
 #import "Worker.h"
+#import "DaySummary.h"
 
 @interface Context : ACContext
 
@@ -21,7 +22,12 @@
 - (BOOL)updateWorkers:(WorkerList *)list;
 - (BOOL) removeWorker:(Worker *) worker;
 
+#pragma mark - DaySummary
+- (BOOL) writeDaySummary:(DaySummary *) summary;
+- (DaySummary *)getDaySummaryWith:(NSString *)dateString;
+
 #pragma mark - Util
+- (NSString *)dateStringFrom:(NSDate *)date;
 - (NSString *) createFileName;
 - (NSString *) getDocumentsPath;
 - (NSString *) readFileAtPath:(NSString *)path;

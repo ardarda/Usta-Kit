@@ -15,7 +15,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     _todaysWorkers = [NSMutableArray array];
+    
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDate *todaysDate = [calendar dateBySettingHour:10 minute:0 second:0 ofDate:[NSDate date] options:0];
+    _todaysDate = [[Context sharedContext] dateStringFrom:todaysDate];
+    NSDateFormatter* df = [[NSDateFormatter alloc] init];
+    
+    
+    NSString *trFormatString = [NSDateFormatter dateFormatFromTemplate:@"dd MMM yyyy" options:0 locale:[NSLocale currentLocale]];
+
+    [df setDateFormat:trFormatString];
+    
+    NSString* todaysDateString = [df stringFromDate:todaysDate];
+    _lblDate.text = todaysDateString;
 
 }
 
@@ -45,6 +59,28 @@
     [self.navigationController pushViewController:workerListVC animated:YES];
 }
 - (IBAction)btnSubmitSelection:(id)sender {
+    
+    for (Worker *myWorker in [_todaysWorkers copy]) {
+        NSMutableArray *marray = [myWorker.datesWorked mutableCopy];
+        [marray addObject:_todaysDate];
+        myWorker.datesWorked = [marray copy];
+    }
+    
+    WorkerList *todaysList = [[WorkerList alloc] init];
+    todaysList.workers = [_todaysWorkers mutableCopy];
+
+    
+    DaySummary *summary = [[DaySummary alloc] init];
+    summary.workerList = todaysList;
+    summary.date = [[Context sharedContext] dateStringFrom:[NSDate date]];
+    if([[Context sharedContext] writeDaySummary:summary]) [[NetworkManager sharedManager] showErrorMsg:@"Günün İşçileri Baaşrıyla Seçilmiştir."];
+
+    
+    
+    
+    
+    return;
+    
     for (Worker *myWorker in [_todaysWorkers copy]) {
         myWorker.numberOfDaysWorked = [NSNumber numberWithInt:myWorker.numberOfDaysWorked.intValue + 1];
     }

@@ -10,5 +10,8 @@
 
 @interface BaseData : ACBaseData
 
+@property (nonatomic, strong) NSNumber<Optional> *Id;
+@property (nonatomic, strong) NSNumber<Optional> *canDeleted;
+@property (nonatomic, strong, getter=isDeleted) NSNumber<Optional> *deleted;
 
 @end

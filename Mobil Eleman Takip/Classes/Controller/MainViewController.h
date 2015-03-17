@@ -15,5 +15,7 @@
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic, strong) NSMutableArray *todaysWorkers; //of Worker
+@property (weak, nonatomic) IBOutlet UILabel *lblDate;
+@property (nonatomic, strong) NSString *todaysDate;
 
 @end

@@ -35,6 +35,14 @@
 
  
 #pragma mark - Workers
+
+- (DaySummary *)getDaySummaryWith:(NSString *)dateString {
+    NSString *pathComponent = [NSString stringWithFormat:@"daySummaries/%@.json",dateString];
+    NSString *path = [[self getDocumentsPath] stringByAppendingPathComponent:pathComponent];
+    return [self getSummaryAtPath:path];
+
+}
+
 - (WorkerList *) getWorkers{
     NSString *path = [[self getDocumentsPath] stringByAppendingPathComponent:@"workers/workers.json"];
     return [self getListAtPath:path];
@@ -42,6 +50,18 @@
 - (BOOL) writeWorkers:(WorkerList *) list{
     NSString *path = [[self getDocumentsPath] stringByAppendingPathComponent:@"workers/workers.json"];
     return [self writeList:list toPath:path];
+}
+#pragma mark - Helpers
+- (NSString *)dateStringFrom:(NSDate *)date {
+    NSDateFormatter *df = [[NSDateFormatter alloc] init];
+    [df setDateFormat:@"yyyy-MM-dd"];
+    return [df stringFromDate:date];
+}
+
+- (BOOL) writeDaySummary:(DaySummary *) summary{
+    NSString *pathComponent = [NSString stringWithFormat:@"daySummaries/%@.json",summary.date];
+    NSString *path = [[self getDocumentsPath] stringByAppendingPathComponent:pathComponent];
+    return [self writeDaySummary:summary toPath:path];
 }
 
 - (BOOL)updateWorkers:(WorkerList *)list {
@@ -109,6 +129,7 @@
     if(err){
         DDLogError(@"Cannot write file to path %@ err=> %@", path, err);
     }
+    
     return success;
 }
 #pragma mark -
@@ -128,8 +149,30 @@
     return nil;
 }
 
+- (DaySummary *) getSummaryAtPath:(NSString *) path{
+    NSString *jsonStr = [self readFileAtPath:path];
+    
+    if(jsonStr){
+        JSONModelError *err = nil;
+        DaySummary *summary = [[DaySummary alloc] initWithString:jsonStr error:&err];
+        if(err){
+            DDLogError(@"Cannot convert to DaySummary ==> %@", err);
+        }
+        else{
+            return summary;
+        }
+    }
+    return nil;
+}
+
 - (BOOL) writeList:(WorkerList *) list toPath:(NSString *) path{
     NSString *jsonStr = [list toJSONString];
+    BOOL success = [self writeString:jsonStr toFileAtPath:path];
+    return success;
+}
+
+- (BOOL) writeDaySummary:(DaySummary *) summary toPath:(NSString *) path{
+    NSString *jsonStr = [summary toJSONString];
     BOOL success = [self writeString:jsonStr toFileAtPath:path];
     return success;
 }

@@ -7,6 +7,9 @@
 //
 
 #import "BaseData.h"
+#import "WorkHistory.h"
+
+@protocol WorkHistory;
 
 @interface Worker : BaseData
 
@@ -14,9 +17,14 @@
 
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSNumber *rate; //daily
+@property (nonatomic, strong) NSNumber *defaultRate; //daily
 @property (nonatomic, strong) NSNumber<Optional> *advance; //avans
 @property (nonatomic, strong) NSString<Optional> *phone;
-
 @property (nonatomic, strong) NSNumber<Optional> *numberOfDaysWorked;
+@property (nonatomic, strong) NSString<Optional> *notes;
+@property (nonatomic, strong) NSArray<Optional> *datesWorked;
+@property (nonatomic, strong) NSArray<Optional,WorkHistory> *workHistory;
+
+- (NSNumber *)balance;
 
 @end

@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		86BBF2BFCB6EC21B5031DB94 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACDA093AFDEFD6966D1D1C6B /* libPods.a */; };
 		B42D51821AAD755200D2B041 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B42D51811AAD755200D2B041 /* NetworkManager.m */; };
+		B430DA491AB8557700B32B20 /* DaySummary.m in Sources */ = {isa = PBXBuildFile; fileRef = B430DA481AB8557700B32B20 /* DaySummary.m */; };
+		B430DA4C1AB8731B00B32B20 /* DaySummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B430DA4B1AB8731B00B32B20 /* DaySummaryViewController.m */; };
+		B430DA4F1AB87C8600B32B20 /* DaySummaryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B430DA4E1AB87C8600B32B20 /* DaySummaryTableViewCell.m */; };
+		B430DA521AB8AD6700B32B20 /* WorkHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = B430DA511AB8AD6700B32B20 /* WorkHistory.m */; };
+		B430DA551AB8AD8D00B32B20 /* DailyWork.m in Sources */ = {isa = PBXBuildFile; fileRef = B430DA541AB8AD8D00B32B20 /* DailyWork.m */; };
 		B4628FA51AACA5B400476A32 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4628FA41AACA5B400476A32 /* main.m */; };
 		B4628FA81AACA5B400476A32 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4628FA71AACA5B400476A32 /* AppDelegate.m */; };
 		B4628FAB1AACA5B400476A32 /* Mobil_Eleman_Takip.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B4628FA91AACA5B400476A32 /* Mobil_Eleman_Takip.xcdatamodeld */; };
@@ -67,6 +72,16 @@
 		ACDA093AFDEFD6966D1D1C6B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B42D51801AAD755200D2B041 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetworkManager.h; path = Classes/NetworkManager.h; sourceTree = "<group>"; };
 		B42D51811AAD755200D2B041 /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetworkManager.m; path = Classes/NetworkManager.m; sourceTree = "<group>"; };
+		B430DA471AB8557700B32B20 /* DaySummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaySummary.h; sourceTree = "<group>"; };
+		B430DA481AB8557700B32B20 /* DaySummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaySummary.m; sourceTree = "<group>"; };
+		B430DA4A1AB8731B00B32B20 /* DaySummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaySummaryViewController.h; sourceTree = "<group>"; };
+		B430DA4B1AB8731B00B32B20 /* DaySummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaySummaryViewController.m; sourceTree = "<group>"; };
+		B430DA4D1AB87C8600B32B20 /* DaySummaryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaySummaryTableViewCell.h; sourceTree = "<group>"; };
+		B430DA4E1AB87C8600B32B20 /* DaySummaryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaySummaryTableViewCell.m; sourceTree = "<group>"; };
+		B430DA501AB8AD6700B32B20 /* WorkHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkHistory.h; sourceTree = "<group>"; };
+		B430DA511AB8AD6700B32B20 /* WorkHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkHistory.m; sourceTree = "<group>"; };
+		B430DA531AB8AD8D00B32B20 /* DailyWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DailyWork.h; sourceTree = "<group>"; };
+		B430DA541AB8AD8D00B32B20 /* DailyWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DailyWork.m; sourceTree = "<group>"; };
 		B4628F9F1AACA5B400476A32 /* Mobil Eleman Takip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mobil Eleman Takip.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4628FA31AACA5B400476A32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4628FA41AACA5B400476A32 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -379,8 +394,14 @@
 				B46290171AACA78700476A32 /* BaseData.m */,
 				B46290191AACA79800476A32 /* Worker.h */,
 				B462901A1AACA79800476A32 /* Worker.m */,
+				B430DA501AB8AD6700B32B20 /* WorkHistory.h */,
+				B430DA511AB8AD6700B32B20 /* WorkHistory.m */,
+				B430DA531AB8AD8D00B32B20 /* DailyWork.h */,
+				B430DA541AB8AD8D00B32B20 /* DailyWork.m */,
 				B462901C1AACAB9B00476A32 /* WorkerList.h */,
 				B462901D1AACAB9B00476A32 /* WorkerList.m */,
+				B430DA471AB8557700B32B20 /* DaySummary.h */,
+				B430DA481AB8557700B32B20 /* DaySummary.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -400,6 +421,8 @@
 				B46290321AAD711300476A32 /* AddWorkerViewController.m */,
 				B4E0E1BA1AAD9841001660F0 /* WorkerDetailViewController.h */,
 				B4E0E1BB1AAD9841001660F0 /* WorkerDetailViewController.m */,
+				B430DA4A1AB8731B00B32B20 /* DaySummaryViewController.h */,
+				B430DA4B1AB8731B00B32B20 /* DaySummaryViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -411,6 +434,8 @@
 				B4E0E1B81AAD79D5001660F0 /* WorkerListTableViewCell.m */,
 				B4E0E1BD1AADB0B4001660F0 /* TodaysWorkersCollectionViewCell.h */,
 				B4E0E1BE1AADB0B4001660F0 /* TodaysWorkersCollectionViewCell.m */,
+				B430DA4D1AB87C8600B32B20 /* DaySummaryTableViewCell.h */,
+				B430DA4E1AB87C8600B32B20 /* DaySummaryTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -475,6 +500,7 @@
 				TargetAttributes = {
 					B4628F9E1AACA5B400476A32 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 5PCSNPTCZ9;
 					};
 					B4628FBA1AACA5B400476A32 = {
 						CreatedOnToolsVersion = 6.1;
@@ -563,6 +589,7 @@
 			files = (
 				B4E0E1BF1AADB0B4001660F0 /* TodaysWorkersCollectionViewCell.m in Sources */,
 				B4E0E1BC1AAD9841001660F0 /* WorkerDetailViewController.m in Sources */,
+				B430DA4C1AB8731B00B32B20 /* DaySummaryViewController.m in Sources */,
 				B46290041AACA5D000476A32 /* ACPassThroughView.m in Sources */,
 				B46290131AACA60100476A32 /* Context.m in Sources */,
 				B4628FFF1AACA5D000476A32 /* ACBaseData.m in Sources */,
@@ -573,9 +600,11 @@
 				B46290031AACA5D000476A32 /* ACFormContainerView.m in Sources */,
 				B46290061AACA5D000476A32 /* ECFeedbackViewController.m in Sources */,
 				B46290181AACA78700476A32 /* BaseData.m in Sources */,
+				B430DA521AB8AD6700B32B20 /* WorkHistory.m in Sources */,
 				B4628FA81AACA5B400476A32 /* AppDelegate.m in Sources */,
 				B46290001AACA5D000476A32 /* ACBaseRequest.m in Sources */,
 				B4628FFE1AACA5D000476A32 /* ACNetworkManager.m in Sources */,
+				B430DA491AB8557700B32B20 /* DaySummary.m in Sources */,
 				B46290261AACB09F00476A32 /* MainViewController.m in Sources */,
 				B4628FAE1AACA5B400476A32 /* ViewController.m in Sources */,
 				B4E0E1B91AAD79D5001660F0 /* WorkerListTableViewCell.m in Sources */,
@@ -588,12 +617,14 @@
 				B46290021AACA5D000476A32 /* ACBaseViewController.m in Sources */,
 				B46290331AAD711300476A32 /* AddWorkerViewController.m in Sources */,
 				B46290011AACA5D000476A32 /* ACBaseResponse.m in Sources */,
+				B430DA4F1AB87C8600B32B20 /* DaySummaryTableViewCell.m in Sources */,
 				B462900B1AACA5D000476A32 /* SZTextView.m in Sources */,
 				B42D51821AAD755200D2B041 /* NetworkManager.m in Sources */,
 				B462900A1AACA5D000476A32 /* HTEmailAutocompleteTextField.m in Sources */,
 				B462900F1AACA5D000476A32 /* UIView+OPCloning.m in Sources */,
 				B462900E1AACA5D000476A32 /* UIFont+Traits.m in Sources */,
 				B4628FFC1AACA5D000476A32 /* AC.m in Sources */,
+				B430DA551AB8AD8D00B32B20 /* DailyWork.m in Sources */,
 				B46290301AAD710700476A32 /* WorkerListViewController.m in Sources */,
 				B4628FA51AACA5B400476A32 /* main.m in Sources */,
 				B462901B1AACA79800476A32 /* Worker.m in Sources */,
@@ -721,7 +752,9 @@
 			baseConfigurationReference = C2E02C7A41DDB561F1C44784 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Mobil Eleman Takip/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -732,7 +765,9 @@
 			baseConfigurationReference = 49A9A846DDCBF061F7B47D07 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Mobil Eleman Takip/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

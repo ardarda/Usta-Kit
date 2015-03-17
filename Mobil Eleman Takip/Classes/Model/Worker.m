@@ -10,4 +10,28 @@
 
 @implementation Worker
 
+
+
+- (NSArray *)datesWorked {
+    if (!_datesWorked) {
+        _datesWorked = [NSMutableArray array];
+        return _datesWorked;
+    } else
+        return _datesWorked;
+}
+
+- (NSNumber *)balance
+{
+    float balance = 0;
+    
+    for (DailyWork *dailyWork in _workHistory){
+        if (dailyWork.isPaid)
+            
+            continue;
+        else
+            balance += dailyWork.workRate.floatValue;
+    }
+    return [NSNumber numberWithFloat: balance - _advance.floatValue];
+}
+
 @end
