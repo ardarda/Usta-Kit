@@ -151,10 +151,10 @@
             </objects>
             <point key="canvasLocation" x="1799" y="70"/>
         </scene>
-        <!--View Controller-->
+        <!--Edit Day Summary View Controller-->
         <scene sceneID="Nxz-gh-tEb">
             <objects>
-                <viewController id="BYL-zf-zos" sceneMemberID="viewController">
+                <viewController id="BYL-zf-zos" customClass="EditDaySummaryViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZQb-rc-q2S"/>
                         <viewControllerLayoutGuide type="bottom" id="2MR-HC-2UT"/>
@@ -179,11 +179,24 @@
                                             <segue destination="DrS-Dd-GqX" kind="show" id="lqh-JS-Ypf"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5lf-Oa-L3n">
+                                        <rect key="frame" x="16" y="403" width="288" height="30"/>
+                                        <color key="backgroundColor" red="0.17305546353045481" green="0.027430248691078376" blue="0.41193181818181823" alpha="0.56000000000000005" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Onayla">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnSubmitSelection:" destination="Gkk-qJ-fJF" eventType="touchUpInside" id="s04-VZ-TjF"/>
+                                        </connections>
+                                    </button>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="0p9-rN-Yx0">
                                         <rect key="frame" x="16" y="78" width="288" height="308"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="bJA-0e-0ZN">
+                                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="bJA-0e-0ZN" customClass="EditDaySummaryTableViewCell">
                                                 <rect key="frame" x="0.0" y="0.0" width="288" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bJA-0e-0ZN" id="5WV-RD-3p3">
@@ -199,20 +212,11 @@
                                                 </tableViewCellContentView>
                                             </tableViewCell>
                                         </prototypes>
-                                    </tableView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5lf-Oa-L3n">
-                                        <rect key="frame" x="16" y="403" width="288" height="30"/>
-                                        <color key="backgroundColor" red="0.17305546353045481" green="0.027430248691078376" blue="0.41193181818181823" alpha="0.56000000000000005" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="Onayla">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
                                         <connections>
-                                            <action selector="btnSubmitSelection:" destination="Gkk-qJ-fJF" eventType="touchUpInside" id="s04-VZ-TjF"/>
+                                            <outlet property="dataSource" destination="BYL-zf-zos" id="rA2-8O-n7K"/>
+                                            <outlet property="delegate" destination="BYL-zf-zos" id="Lsl-Bj-akD"/>
                                         </connections>
-                                    </button>
+                                    </tableView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.24681439295334673" green="1" blue="0.56378593593129533" alpha="0.44" colorSpace="calibratedRGB"/>
                             </view>
@@ -228,15 +232,21 @@
                     <navigationItem key="navigationItem" id="daJ-hh-sjc"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="btnSelectWork" destination="dYg-iP-z0P" id="iRY-Lr-tgm"/>
+                        <outlet property="btnSubmit" destination="5lf-Oa-L3n" id="N7u-F1-xQF"/>
+                        <outlet property="lblDate" destination="6vN-T2-3vr" id="nwb-Pp-lKJ"/>
+                        <outlet property="tableView" destination="0p9-rN-Yx0" id="Hci-ge-rh6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B6Q-g4-ort" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2544" y="70"/>
         </scene>
-        <!--View Controller-->
+        <!--Select Work View Controller-->
         <scene sceneID="X8t-ec-e4h">
             <objects>
-                <viewController id="DrS-Dd-GqX" sceneMemberID="viewController">
+                <viewController id="DrS-Dd-GqX" customClass="SelectWorkViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Iq9-m5-eve"/>
                         <viewControllerLayoutGuide type="bottom" id="nXp-MI-iEq"/>
@@ -249,7 +259,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="CzN-GQ-6ps">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="CzN-GQ-6ps" customClass="SelectWorkTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CzN-GQ-6ps" id="jzw-Gk-loO">
@@ -265,6 +275,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="DrS-Dd-GqX" id="Q3H-Sl-AOG"/>
+                                    <outlet property="delegate" destination="DrS-Dd-GqX" id="jDg-yx-nGf"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -275,10 +289,10 @@
             </objects>
             <point key="canvasLocation" x="2936" y="70"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Work View Controller-->
         <scene sceneID="sAg-Yg-9Pm">
             <objects>
-                <viewController id="buX-zn-nNV" sceneMemberID="viewController">
+                <viewController id="buX-zn-nNV" customClass="AddWorkViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LrB-26-MBP"/>
                         <viewControllerLayoutGuide type="bottom" id="SBx-yQ-Xfo"/>
@@ -337,6 +351,11 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="btnSave" destination="H8Y-tU-5Fz" id="zZd-dA-QVb"/>
+                        <outlet property="tfWorkName" destination="xTQ-ZE-P9c" id="pHS-sS-564"/>
+                        <outlet property="tfWorkPrice" destination="5yt-Vg-rC6" id="Ilg-qZ-8fe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GYK-sc-blw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
