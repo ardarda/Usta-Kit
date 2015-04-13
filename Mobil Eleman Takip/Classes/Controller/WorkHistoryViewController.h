@@ -12,7 +12,7 @@
 @interface WorkHistoryViewController : BaseViewController<UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) Worker *currentWorker;
-@property (nonatomic, strong) NSArray *workHistory;
+@property (nonatomic, strong) NSArray *dailyWorks; //of DailyWorks of worker
 @property (weak, nonatomic) IBOutlet UILabel *lblWorkerName;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 

@@ -8,7 +8,9 @@
 
 #import "DaySummaryViewController.h"
 #import "DaySummaryTableViewCell.h"
-#import "MainViewController.h"
+#import "EditDaySummaryViewController.h"
+#import "Work.h"
+#import "FileManager.h"
 
 @interface DaySummaryViewController ()
 
@@ -24,7 +26,7 @@
     if (!_date)
         _date = [NSDate date];
     self.title = @"Gun Ozetleri";
-    
+    [[FileManager sharedManager] fetchDailyWorkOfWorker:nil];
 }
 
 
@@ -47,7 +49,7 @@
 }
 #pragma mark - Edit
 - (IBAction)editDaySummary:(id)sender {
-    MainViewController *editVC = [self.storyboard instantiateViewControllerWithIdentifier:@"Summary Edit VC"];
+    EditDaySummaryViewController *editVC = [self.storyboard instantiateViewControllerWithIdentifier:@"Edit Day Summary VC"];
     editVC.date = _date;
     [self.navigationController pushViewController:editVC animated:YES];
 }
@@ -55,7 +57,7 @@
 
 - (void)refreshWith:(NSString *)dateString {
     _currentSummary = [[Context sharedContext] getDaySummaryWith:dateString];
-    if (_currentSummary.workerList.workers.count > 0) {
+    if (_currentSummary.dailyWorks.count > 0) {
         
 
         
@@ -85,14 +87,14 @@
 
 #pragma mark - Table View Del & Dat
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return _currentSummary.workerList.workers.count;
+    return _currentSummary.dailyWorks.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     DaySummaryTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Day Summary Cell"];
-    Worker *worker = [_currentSummary.workerList.workers objectAtIndex:indexPath.row];
-    cell.lblWorkerName.text = worker.name;
-    cell.lblWorkerRate.text = worker.rate.stringValue;
+    DailyWork *dailyWork = [_currentSummary.dailyWorks objectAtIndex:indexPath.row];
+    cell.lblWorkerName.text = dailyWork.name;
+//    cell.lblWorkerRate.text = worker.rate.stringValue;
     return cell;
 }
 /*

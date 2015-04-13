@@ -25,6 +25,12 @@
         return _datesWorked;
 }
 
+- (NSNumber<Optional> *)isDailyWorkPaid {
+    if (!_isDailyWorkPaid)
+        _isDailyWorkPaid = [NSNumber numberWithBool:NO];
+    return _isDailyWorkPaid;
+}
+
 - (NSNumber *)balance
 {
     float balance = 0;
@@ -34,7 +40,7 @@
             
             continue;
         else
-            balance += dailyWork.workRate.floatValue;
+            balance += dailyWork.rate.floatValue;
     }
     return [NSNumber numberWithFloat: balance - _advance.floatValue];
 }

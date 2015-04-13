@@ -1,5 +1,5 @@
 //
-//  SelectWorkTableViewCell.h
+//  ShowWorkersTableViewCell.h
 //  Mobil Eleman Takip
 //
 //  Created by Arda Cicek on 13/04/15.
@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ACTextField.h"
 
-@interface SelectWorkTableViewCell : UITableViewCell
+@interface ShowWorkersTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *lblName;
+@property (weak, nonatomic) IBOutlet ACTextField *tfRate;
 
 @end

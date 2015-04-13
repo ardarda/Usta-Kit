@@ -52,6 +52,11 @@
 -(void)test:(UIAlertView*)x{
     [x dismissWithClickedButtonIndex:-1 animated:YES];
 }
+- (NSString *)dateStringFrom:(NSDate *)date {
+    NSDateFormatter *df = [[NSDateFormatter alloc] init];
+    [df setDateFormat:@"yyyy-MM-dd"];
+    return [df stringFromDate:date];
+}
 
 
 - (void)didReceiveMemoryWarning {

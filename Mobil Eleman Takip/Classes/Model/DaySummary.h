@@ -7,10 +7,13 @@
 //
 
 #import "BaseData.h"
-#import "WorkerList.h"
+#import "DailyWork.h"
+
+@protocol DailyWork;
+
 @interface DaySummary : BaseData
 
-@property (nonatomic, strong) WorkerList<Optional> *workerList;
+@property (nonatomic, strong) NSArray<Optional, DailyWork> *dailyWorks;
 @property (nonatomic, strong) NSString<Optional> *date;
 
 

@@ -10,12 +10,12 @@
 
 @implementation DaySummary
 
--(WorkerList *)workerList
+-(NSArray *)dailyWorks
 {
-    if(_workerList)
-        return _workerList;
-    else
-        return [[WorkerList alloc] init];
+    if(!_dailyWorks) {
+        _dailyWorks =  (NSArray<Optional, DailyWork> *)[NSArray array];
+    }
+    return _dailyWorks;
 }
-
+    
 @end

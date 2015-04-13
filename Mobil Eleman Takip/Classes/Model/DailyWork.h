@@ -7,13 +7,16 @@
 //
 
 #import "BaseData.h"
+#import "WorkerList.h"
 
 @interface DailyWork : BaseData
 
-@property (nonatomic, strong) NSString<Optional> *workName;
-@property (nonatomic, strong) NSNumber<Optional> *workRate;
-@property (nonatomic, strong) NSString<Optional> *workNote;
-@property (nonatomic, strong) NSArray<Optional> *workDates;
+@property (nonatomic, strong) NSString<Optional> *name;
+@property (nonatomic, strong) NSString<Optional> *date;
+@property (nonatomic, strong) NSString<Optional> *notes;
+@property (nonatomic, strong) WorkerList<Optional> *workerList;
+
+@property (nonatomic, strong) NSNumber<Optional> *rate;
 @property (nonatomic, strong, getter=isPaid) NSNumber<Optional> *paid;
 
 @end

@@ -8,15 +8,6 @@
 
 #import "Context.h"
 
-#define kAOUserDefaultKeySELECTEDRINGERTONE @"kAOUserDefaultKeySELECTEDRINGERTONE"
-#define kAOUserDefaultKeySELECTEDRINGERNAME @"kAOUserDefaultKeySELECTEDRINGERNAME"
-#define kAOUserDefaultKeyISPREMIUM @"kAOUserDefaultKeyISPREMIUM"
-#define kAOUserDefaultKeyShouldVibrate @"kAOUserDefaultKeyShouldVibrate"
-#define kAOUserDefaultKeyVolume @"kAOUserDefaultKeyVolume"
-
-#define kAOUserDefaultDidRunBefore @"kAOUserDefaultDidRunBefore2.0"
-
-
 @implementation Context
 
 +(Context *) sharedContext
@@ -33,24 +24,66 @@
     return _sharedInstance;
 }
 
- 
-#pragma mark - Workers
+#pragma mark - Day Summary
 
 - (DaySummary *)getDaySummaryWith:(NSString *)dateString {
     NSString *pathComponent = [NSString stringWithFormat:@"daySummaries/%@.json",dateString];
     NSString *path = [[self getDocumentsPath] stringByAppendingPathComponent:pathComponent];
     return [self getSummaryAtPath:path];
-
 }
+
+- (BOOL) writeDaySummary:(DaySummary *) summary{
+#warning unfinished implementation
+    //    [self updateWorkers:summary];//TODO:fix it
+    NSString *pathComponent = [NSString stringWithFormat:@"daySummaries/%@.json",summary.date];
+    NSString *path = [[self getDocumentsPath] stringByAppendingPathComponent:pathComponent];
+    return [self writeDaySummary:summary toPath:path];
+}
+
+#pragma mark - Works
+
+- (WorkList *) getWorks{
+    NSString *path = [[self getDocumentsPath] stringByAppendingPathComponent:@"works/works.json"];
+    return [self getWorkListAtPath:path];
+}
+
+- (BOOL) writeWorks:(WorkList *) list{
+    NSString *path = [[self getDocumentsPath] stringByAppendingPathComponent:@"works/works.json"];
+    return [self writeWorkList:list toPath:path];
+}
+
+- (BOOL) addWork:(Work *) work{
+    NSString *path = [[self getDocumentsPath] stringByAppendingPathComponent:@"works/works.json"];
+    return [self addWork:work toListAtPath:path];
+}
+
+- (BOOL) removeWork:(Work *) work{
+    NSString *path = [[self getDocumentsPath] stringByAppendingPathComponent:@"works/works.json"];
+    return [self removeWork:work fromListAtPath:path];
+}
+
+#pragma mark - Workers
 
 - (WorkerList *) getWorkers{
     NSString *path = [[self getDocumentsPath] stringByAppendingPathComponent:@"workers/workers.json"];
     return [self getListAtPath:path];
 }
+
 - (BOOL) writeWorkers:(WorkerList *) list{
     NSString *path = [[self getDocumentsPath] stringByAppendingPathComponent:@"workers/workers.json"];
     return [self writeList:list toPath:path];
 }
+
+- (BOOL) addWorker:(Worker *) worker{
+    NSString *path = [[self getDocumentsPath] stringByAppendingPathComponent:@"workers/workers.json"];
+    return [self addWorker:worker toListAtPath:path];
+}
+
+- (BOOL) removeWorker:(Worker *) worker{
+    NSString *path = [[self getDocumentsPath] stringByAppendingPathComponent:@"workers/workers.json"];
+    return [self removeWorker:worker fromListAtPath:path];
+}
+
 #pragma mark - Helpers
 - (NSString *)dateStringFrom:(NSDate *)date {
     NSDateFormatter *df = [[NSDateFormatter alloc] init];
@@ -58,13 +91,7 @@
     return [df stringFromDate:date];
 }
 
-- (BOOL) writeDaySummary:(DaySummary *) summary{
-#warning unfinished implementation
-    [self updateWorkers:summary];//TODO:fix it
-    NSString *pathComponent = [NSString stringWithFormat:@"daySummaries/%@.json",summary.date];
-    NSString *path = [[self getDocumentsPath] stringByAppendingPathComponent:pathComponent];
-    return [self writeDaySummary:summary toPath:path];
-}
+
 /*
 - (BOOL)updateWorkers:(WorkerList *)list {
     
@@ -72,22 +99,17 @@
     return [self updateList:list toPath:path];
 }
 */
-- (BOOL)updateWorkers:(DaySummary *)summary {
-    
+
+//update workers flow will decided, implemented later
+
+- (BOOL)updateWorkers:(WorkerList *)workerList {
+
     NSString *path = [[self getDocumentsPath] stringByAppendingPathComponent:@"workers/workers.json"];
-    return [self updateList:summary.workerList toPath:path];
+    return [self updateList:workerList toPath:path];
 }
 
 
-- (BOOL) addWorker:(Worker *) worker{
-    NSString *path = [[self getDocumentsPath] stringByAppendingPathComponent:@"workers/workers.json"];
-    
-    return [self addWorker:worker toListAtPath:path];
-}
-- (BOOL) removeWorker:(Worker *) worker{
-    NSString *path = [[self getDocumentsPath] stringByAppendingPathComponent:@"workers/workers.json"];
-    return [self removeWorker:worker fromListAtPath:path];
-}
+
 
 #pragma mark - Util
 - (NSString *) createFileName{
@@ -158,7 +180,21 @@
     }
     return nil;
 }
-
+- (WorkList *) getWorkListAtPath:(NSString *) path{
+    NSString *jsonStr = [self readFileAtPath:path];
+    
+    if(jsonStr){
+        JSONModelError *err = nil;
+        WorkList *list = [[WorkList alloc] initWithString:jsonStr error:&err];
+        if(err){
+            DDLogError(@"Cannot convert to CallerList ==> %@", err);
+        }
+        else{
+            return list;
+        }
+    }
+    return nil;
+}
 - (DaySummary *) getSummaryAtPath:(NSString *) path{
     NSString *jsonStr = [self readFileAtPath:path];
     
@@ -176,6 +212,12 @@
 }
 
 - (BOOL) writeList:(WorkerList *) list toPath:(NSString *) path{
+    NSString *jsonStr = [list toJSONString];
+    BOOL success = [self writeString:jsonStr toFileAtPath:path];
+    return success;
+}
+
+- (BOOL) writeWorkList:(WorkList *) list toPath:(NSString *) path{
     NSString *jsonStr = [list toJSONString];
     BOOL success = [self writeString:jsonStr toFileAtPath:path];
     return success;
@@ -229,6 +271,31 @@
         return success;
     }
 }
+
+- (BOOL) addWork:(Work *) work toListAtPath:(NSString *) path{
+    WorkList *list = [self getWorkListAtPath:path];
+    if(list){
+        //        Worker *existingWorker = [self getCallerWithID:worker.id fromArray:list.workers];
+        
+        //        if(existingWorker == nil){
+        list.works = (NSArray<Work>*)[[list.works mutableCopy] arrayByAddingObject:work];
+        [self writeWorkList:list toPath:path];
+        return YES;
+        //        }
+        //        else{
+        //            DDLogError(@"Worker already exists!");
+        //            return NO;
+        //        }
+    }
+    else{
+        WorkList *list = [[WorkList alloc] init];
+        list.works = (NSArray<Work>*)@[work];
+        BOOL success = [self writeWorkList:list toPath:path];
+        return success;
+    }
+}
+
+
 - (Worker *) getCallerWithID:(NSString *) workerID fromArray:(NSArray *) list{
     NSArray *filteredList = [list filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"id == %@", workerID]];
     
@@ -238,21 +305,35 @@
     return nil;
 }
 
+- (BOOL) removeWork:(Work *) work fromListAtPath:(NSString *) path{
+    WorkList *list = [self getWorkListAtPath:path];
+//    Work *existingWork = [self getCallerWithID:work.id fromArray:list.works];
+//    
+//    if(existingWorker == nil){
+//        DDLogError(@"Worker do not exists!");
+//        return NO;;
+//    }
+//    else{
+        NSMutableArray<Work> *newWorks = [list.works mutableCopy];
+        [newWorks removeObject:work];
+        WorkList *newList = [[WorkList alloc] init];
+        newList.works = newWorks;
+        return [self writeWorkList:newList toPath:path];
+//    }
+}
+
 - (BOOL) removeWorker:(Worker *) worker fromListAtPath:(NSString *) path{
     WorkerList *list = [self getListAtPath:path];
-    Worker *existingWorker = [self getCallerWithID:worker.id fromArray:list.workers];
-    
-    if(existingWorker == nil){
-        DDLogError(@"Worker do not exists!");
-        return NO;;
+   
+    NSMutableArray<Worker> *newWorkers = [list.workers mutableCopy];
+    for (Worker *myWorker in list.workers) {
+        if ([worker.name isEqualToString:myWorker.name]) {
+            [newWorkers removeObject:myWorker];
+        }
     }
-    else{
-        NSMutableArray<Worker> *newWorkers = [list.workers mutableCopy];
-        [newWorkers removeObject:existingWorker];
-        WorkerList *newList = [[WorkerList alloc] init];
-        newList.workers = newWorkers;
-        return [self writeList:newList toPath:path];
-    }
+    WorkerList *newList = [[WorkerList alloc] init];
+    newList.workers = [newWorkers copy];
+    return [self writeList:newList toPath:path];
 }
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "AddWorkViewController.h"
+#import "Context.h"
 
 @interface AddWorkViewController ()
 
@@ -22,6 +23,18 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Handlers
+- (IBAction)btnSaveHandler:(id)sender {
+    Work *work = [[Work alloc] init];
+    work.name = _tfWorkName.text;
+    work.price = [NSNumber numberWithInteger:_tfWorkPrice.text.integerValue];
+    if([[Context sharedContext] addWork:work]){
+        [self showSelfDestructingAlert:@"İş Kaydedildi."];
+        _tfWorkPrice.text = @"";
+        _tfWorkName.text = @"";
+    }
 }
 
 /*

@@ -57,9 +57,13 @@
         case 1:
         {
             // Delete button was pressed
-            
-//            [self.tableView deleteRowsAtIndexPaths:@[cellIndexPath]
-//                                  withRowAnimation:UITableViewRowAnimationAutomatic];
+            Worker *workerToDelete = [_workerList.workers objectAtIndex:cellIndexPath.row];
+            if ([[Context sharedContext] removeWorker:workerToDelete]) {
+                _workerList = [[Context sharedContext] getWorkers];
+                [self.tableView deleteRowsAtIndexPaths:@[cellIndexPath]
+                                      withRowAnimation:UITableViewRowAnimationAutomatic];
+
+            }
             break;
         }
         default:

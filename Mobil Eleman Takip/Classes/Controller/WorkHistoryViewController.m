@@ -8,6 +8,7 @@
 
 #import "WorkHistoryViewController.h"
 #import "WorkHistoryTableViewCell.h"
+#import "FileManager.h"
 
 @interface WorkHistoryViewController ()
 
@@ -19,12 +20,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     if (_currentWorker) {
-        _workHistory = _currentWorker.workHistory;
+        [self fetchWorkHistory];
     }
     _lblWorkerName.text = _currentWorker.name;
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
 
 }
+
+
+- (void)fetchWorkHistory {
+    _dailyWorks = [[FileManager sharedManager] fetchDailyWorkOfWorker:_currentWorker];
+    [_tableView reloadData];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -35,16 +43,20 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     WorkHistoryTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Work History Cell"];
-    
-    cell.lblTitle.text = [_currentWorker.datesWorked objectAtIndex:indexPath.row];
-    DailyWork *dailyWork = [_workHistory objectAtIndex:indexPath.row];
-    
-    cell.lblDetail.text = [NSString stringWithFormat:@"%@ - %@ - %@", dailyWork.workName, dailyWork.workRate, dailyWork.workNote];
+    DailyWork *dailyWork = [_dailyWorks objectAtIndex:indexPath.row];
+    NSNumber *rate;
+    cell.lblTitle.text = dailyWork.date;
+    for (Worker *worker in dailyWork.workerList.workers) {
+        if ([worker.name isEqualToString:_currentWorker.name]) {
+            rate = worker.rate;
+        }
+    }
+    cell.lblDetail.text = [NSString stringWithFormat:@"%@ - %@", dailyWork.name, rate.stringValue];
     return cell;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return _currentWorker.datesWorked.count;
+    return _dailyWorks.count;
 }
 
 

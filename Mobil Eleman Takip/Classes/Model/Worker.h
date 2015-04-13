@@ -7,14 +7,13 @@
 //
 
 #import "BaseData.h"
-#import "WorkHistory.h"
+#import "DailyWork.h"
 
-@protocol WorkHistory;
+@protocol DailyWork;
 
 @interface Worker : BaseData
 
 @property (nonatomic, strong) NSString<Optional> *id;
-
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSNumber *rate; //daily
 @property (nonatomic, strong) NSNumber<Optional> *defaultRate; //daily
@@ -26,5 +25,8 @@
 @property (nonatomic, strong) NSArray<Optional,DailyWork> *workHistory;
 
 - (NSNumber *)balance;
+
+//TODO:fix it
+@property (nonatomic, strong) NSNumber<Optional> *isDailyWorkPaid;
 
 @end

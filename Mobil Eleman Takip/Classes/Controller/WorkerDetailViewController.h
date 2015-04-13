@@ -25,4 +25,7 @@
 @property (weak, nonatomic) IBOutlet ACTextField *tfTotal;
 @property (weak, nonatomic) IBOutlet ACTextField *tfNewAdvance;
 
+@property (nonatomic, strong) NSArray *unpaidDailyWorks;
+@property (nonatomic) NSInteger unpaidAmount;
+
 @end

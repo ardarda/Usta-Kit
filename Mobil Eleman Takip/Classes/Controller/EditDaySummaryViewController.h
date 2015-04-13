@@ -7,11 +7,17 @@
 //
 
 #import "BaseViewController.h"
+#import "DaySummary.h"
+#import "Context.h"
 
-@interface EditDaySummaryViewController : BaseViewController
+@interface EditDaySummaryViewController : BaseViewController<UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *lblDate;
 @property (weak, nonatomic) IBOutlet UIButton *btnSelectWork;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIButton *btnSubmit;
+
+@property (nonatomic, strong) NSDate *date;
+
+@property (nonatomic, strong) DaySummary *currentDaySummary;
 
 @end

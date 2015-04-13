@@ -7,7 +7,11 @@
 //
 
 #import "BaseViewController.h"
+#import "Context.h"
 
-@interface SelectWorkViewController : BaseViewController
+@interface SelectWorkViewController : BaseViewController<UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic, strong) WorkList *workList;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end

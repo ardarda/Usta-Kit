@@ -12,4 +12,5 @@
 @interface BaseViewController : ACBaseViewController <SWRevealViewControllerDelegate>
 
 - (void)showSelfDestructingAlert:(NSString *)message;
+- (NSString *)dateStringFrom:(NSDate *)date;
 @end

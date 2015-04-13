@@ -10,10 +10,19 @@
 #import "WorkerList.h"
 #import "Worker.h"
 #import "DaySummary.h"
+#import "WorkList.h"
 
 @interface Context : ACContext
 
 +(Context *) sharedContext;
+
+
+#pragma mark - Works
+
+- (WorkList *) getWorks;
+- (BOOL) writeWorks:(WorkList *) list;
+- (BOOL) addWork:(Work *) work;
+- (BOOL) removeWork:(Work *) work;
 
 #pragma mark - Workers
 - (WorkerList *) getWorkers;
@@ -46,6 +55,9 @@
 #pragma mark - Dump Context
 
 @property (nonatomic, strong) Worker *selectedWorker;
+@property (nonatomic, strong) Work *selectedWork;
+@property (nonatomic, strong) DailyWork *selecetedDailyWork;
+
 
 
 @end

@@ -10,10 +10,10 @@
 
 @implementation DailyWork
 
-- (NSArray<Optional> *)workDates{
-    if (!_workDates)
-        _workDates = [NSArray array];
-    return _workDates;
+- (WorkerList*)workerList{
+    if (!_workerList)
+        _workerList = [[WorkerList alloc] init];
+    return _workerList;
 }
 
 @end
