@@ -10,12 +10,16 @@
 #import "Context.h"
 #import "ACFormContainerView.h"
 
-@interface MainViewController : BaseViewController
+@interface MainViewController : BaseViewController<UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet ACFormContainerView *formContainer;
 
+@property (nonatomic, strong) NSDate *date;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic, strong) NSMutableArray *todaysWorkers; //of Worker
 @property (weak, nonatomic) IBOutlet UILabel *lblDate;
 @property (nonatomic, strong) NSString *todaysDate;
+@property (nonatomic, strong) DaySummary *daySummary;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) DailyWork *dailyWork;
 
 @end

@@ -13,6 +13,7 @@
 @property (nonatomic, strong) NSString<Optional> *workName;
 @property (nonatomic, strong) NSNumber<Optional> *workRate;
 @property (nonatomic, strong) NSString<Optional> *workNote;
+@property (nonatomic, strong) NSArray<Optional> *workDates;
 @property (nonatomic, strong, getter=isPaid) NSNumber<Optional> *paid;
 
 @end

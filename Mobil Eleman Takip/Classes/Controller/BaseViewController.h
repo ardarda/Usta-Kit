@@ -11,4 +11,5 @@
 
 @interface BaseViewController : ACBaseViewController <SWRevealViewControllerDelegate>
 
+- (void)showSelfDestructingAlert:(NSString *)message;
 @end

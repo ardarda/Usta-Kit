@@ -59,15 +59,25 @@
 }
 
 - (BOOL) writeDaySummary:(DaySummary *) summary{
+#warning unfinished implementation
+    [self updateWorkers:summary];//TODO:fix it
     NSString *pathComponent = [NSString stringWithFormat:@"daySummaries/%@.json",summary.date];
     NSString *path = [[self getDocumentsPath] stringByAppendingPathComponent:pathComponent];
     return [self writeDaySummary:summary toPath:path];
 }
-
+/*
 - (BOOL)updateWorkers:(WorkerList *)list {
+    
     NSString *path = [[self getDocumentsPath] stringByAppendingPathComponent:@"workers/workers.json"];
     return [self updateList:list toPath:path];
 }
+*/
+- (BOOL)updateWorkers:(DaySummary *)summary {
+    
+    NSString *path = [[self getDocumentsPath] stringByAppendingPathComponent:@"workers/workers.json"];
+    return [self updateList:summary.workerList toPath:path];
+}
+
 
 - (BOOL) addWorker:(Worker *) worker{
     NSString *path = [[self getDocumentsPath] stringByAppendingPathComponent:@"workers/workers.json"];

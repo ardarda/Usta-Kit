@@ -10,7 +10,12 @@
 
 @implementation Worker
 
-
+- (NSArray *)workHistory {
+    if (!_workHistory) {
+        _workHistory = (NSArray<Optional, DailyWork> *)[NSArray array];
+    }
+    return _workHistory;
+}
 
 - (NSArray *)datesWorked {
     if (!_datesWorked) {

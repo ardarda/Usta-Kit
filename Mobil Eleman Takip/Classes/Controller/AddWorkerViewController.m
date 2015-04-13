@@ -24,7 +24,7 @@
 }
 
 - (IBAction)btnAddWorkerHandler:(id)sender {
-    if (_tfName.text.length > 3 && _tfRate.text.length > 1) {
+    if (_tfName.text.length > 0 && _tfRate.text.length > 0) {
         Worker *worker = [[Worker alloc] init];
         worker.name = _tfName.text;
         worker.phone = _tfPhone.text;
@@ -36,7 +36,10 @@
             _tfRate.text = @"";
             
         }else [[NetworkManager sharedManager] showErrorMsg:@"Hata"];
+    } else {
+        [[NetworkManager sharedManager] showErrorMsg:@"Lutfen hem isim hem de yevmiye giriniz"];
     }
+    [_tfName becomeFirstResponder];
 }
 
 

@@ -52,9 +52,13 @@
 		B462902D1AACB56600476A32 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B462902C1AACB56600476A32 /* MenuViewController.m */; };
 		B46290301AAD710700476A32 /* WorkerListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B462902F1AAD710700476A32 /* WorkerListViewController.m */; };
 		B46290331AAD711300476A32 /* AddWorkerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B46290321AAD711300476A32 /* AddWorkerViewController.m */; };
+		B4C5A8DB1AC06AD30036847E /* WorkHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C5A8DA1AC06AD30036847E /* WorkHistoryViewController.m */; };
+		B4C5A8DE1AC06FFB0036847E /* WorkHistoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C5A8DD1AC06FFB0036847E /* WorkHistoryTableViewCell.m */; };
 		B4E0E1B91AAD79D5001660F0 /* WorkerListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E0E1B81AAD79D5001660F0 /* WorkerListTableViewCell.m */; };
 		B4E0E1BC1AAD9841001660F0 /* WorkerDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E0E1BB1AAD9841001660F0 /* WorkerDetailViewController.m */; };
 		B4E0E1BF1AADB0B4001660F0 /* TodaysWorkersCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E0E1BE1AADB0B4001660F0 /* TodaysWorkersCollectionViewCell.m */; };
+		B4F4F91B1ADB9EFD0073D36E /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4F4F9191ADB9EFD0073D36E /* Crashlytics.framework */; };
+		B4F4F91C1ADB9EFD0073D36E /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4F4F91A1ADB9EFD0073D36E /* Fabric.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,12 +158,18 @@
 		B462902F1AAD710700476A32 /* WorkerListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkerListViewController.m; sourceTree = "<group>"; };
 		B46290311AAD711300476A32 /* AddWorkerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddWorkerViewController.h; sourceTree = "<group>"; };
 		B46290321AAD711300476A32 /* AddWorkerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddWorkerViewController.m; sourceTree = "<group>"; };
+		B4C5A8D91AC06AD30036847E /* WorkHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkHistoryViewController.h; sourceTree = "<group>"; };
+		B4C5A8DA1AC06AD30036847E /* WorkHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkHistoryViewController.m; sourceTree = "<group>"; };
+		B4C5A8DC1AC06FFB0036847E /* WorkHistoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkHistoryTableViewCell.h; sourceTree = "<group>"; };
+		B4C5A8DD1AC06FFB0036847E /* WorkHistoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkHistoryTableViewCell.m; sourceTree = "<group>"; };
 		B4E0E1B71AAD79D5001660F0 /* WorkerListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkerListTableViewCell.h; sourceTree = "<group>"; };
 		B4E0E1B81AAD79D5001660F0 /* WorkerListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkerListTableViewCell.m; sourceTree = "<group>"; };
 		B4E0E1BA1AAD9841001660F0 /* WorkerDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkerDetailViewController.h; sourceTree = "<group>"; };
 		B4E0E1BB1AAD9841001660F0 /* WorkerDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkerDetailViewController.m; sourceTree = "<group>"; };
 		B4E0E1BD1AADB0B4001660F0 /* TodaysWorkersCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodaysWorkersCollectionViewCell.h; sourceTree = "<group>"; };
 		B4E0E1BE1AADB0B4001660F0 /* TodaysWorkersCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodaysWorkersCollectionViewCell.m; sourceTree = "<group>"; };
+		B4F4F9191ADB9EFD0073D36E /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		B4F4F91A1ADB9EFD0073D36E /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		C2E02C7A41DDB561F1C44784 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -168,7 +178,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4F4F91B1ADB9EFD0073D36E /* Crashlytics.framework in Frameworks */,
 				86BBF2BFCB6EC21B5031DB94 /* libPods.a in Frameworks */,
+				B4F4F91C1ADB9EFD0073D36E /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,6 +197,8 @@
 		30EF6E69E4050B0F71A21C59 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B4F4F9191ADB9EFD0073D36E /* Crashlytics.framework */,
+				B4F4F91A1ADB9EFD0073D36E /* Fabric.framework */,
 				ACDA093AFDEFD6966D1D1C6B /* libPods.a */,
 			);
 			name = Frameworks;
@@ -423,6 +437,8 @@
 				B4E0E1BB1AAD9841001660F0 /* WorkerDetailViewController.m */,
 				B430DA4A1AB8731B00B32B20 /* DaySummaryViewController.h */,
 				B430DA4B1AB8731B00B32B20 /* DaySummaryViewController.m */,
+				B4C5A8D91AC06AD30036847E /* WorkHistoryViewController.h */,
+				B4C5A8DA1AC06AD30036847E /* WorkHistoryViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -436,6 +452,8 @@
 				B4E0E1BE1AADB0B4001660F0 /* TodaysWorkersCollectionViewCell.m */,
 				B430DA4D1AB87C8600B32B20 /* DaySummaryTableViewCell.h */,
 				B430DA4E1AB87C8600B32B20 /* DaySummaryTableViewCell.m */,
+				B4C5A8DC1AC06FFB0036847E /* WorkHistoryTableViewCell.h */,
+				B4C5A8DD1AC06FFB0036847E /* WorkHistoryTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -461,6 +479,7 @@
 				B4628F9C1AACA5B400476A32 /* Frameworks */,
 				B4628F9D1AACA5B400476A32 /* Resources */,
 				F35ED82E9485326E54F827DE /* Copy Pods Resources */,
+				B4F4F9181ADB9EC20073D36E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -565,6 +584,19 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		B4F4F9181ADB9EC20073D36E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 5152c726b873962a702f4ebf20226df1cbeb1405 dca66bc54e3e26b8140fbd94b2e23808d91c3ce484d2ea8d9478db51d61d10c1";
+		};
 		F35ED82E9485326E54F827DE /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -613,6 +645,7 @@
 				B4628FFD1AACA5D000476A32 /* ACContext.m in Sources */,
 				B46290051AACA5D000476A32 /* ACTextField.m in Sources */,
 				B462902D1AACB56600476A32 /* MenuViewController.m in Sources */,
+				B4C5A8DE1AC06FFB0036847E /* WorkHistoryTableViewCell.m in Sources */,
 				B46290091AACA5D000476A32 /* HTAutocompleteTextField.m in Sources */,
 				B46290021AACA5D000476A32 /* ACBaseViewController.m in Sources */,
 				B46290331AAD711300476A32 /* AddWorkerViewController.m in Sources */,
@@ -627,6 +660,7 @@
 				B430DA551AB8AD8D00B32B20 /* DailyWork.m in Sources */,
 				B46290301AAD710700476A32 /* WorkerListViewController.m in Sources */,
 				B4628FA51AACA5B400476A32 /* main.m in Sources */,
+				B4C5A8DB1AC06AD30036847E /* WorkHistoryViewController.m in Sources */,
 				B462901B1AACA79800476A32 /* Worker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -753,6 +787,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Mobil Eleman Takip/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -766,6 +804,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Mobil Eleman Takip/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

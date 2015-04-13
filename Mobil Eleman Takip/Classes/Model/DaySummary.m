@@ -10,4 +10,12 @@
 
 @implementation DaySummary
 
+-(WorkerList *)workerList
+{
+    if(_workerList)
+        return _workerList;
+    else
+        return [[WorkerList alloc] init];
+}
+
 @end

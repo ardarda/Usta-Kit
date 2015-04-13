@@ -18,6 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     //add menu button to navcon
+    
     if(self.navigationController){
 //            [self.revealViewController panGestureRecognizer];
 //            [self.revealViewController tapGestureRecognizer];
@@ -25,7 +26,7 @@
             
             if(self.navigationController.viewControllers.count < 2){
                 UIBarButtonItem *menuItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav_menu_icon"] style:UIBarButtonItemStylePlain target:self action:@selector(sidebarButtonHandler:)];
-                [self.navigationItem setLeftBarButtonItem:menuItem];
+//                [self.navigationItem setLeftBarButtonItem:menuItem];
         }
     }
     
@@ -39,9 +40,19 @@
 
 - (void) sidebarButtonHandler:(id) sender{
     [self.revealViewController revealToggleAnimated:YES];
+}
 
+- (void)showSelfDestructingAlert:(NSString *)message {
+    UIAlertView *myal = [[UIAlertView alloc] initWithTitle:nil message:message delegate:nil cancelButtonTitle:nil otherButtonTitles:nil];
+    [myal show];
+    [self performSelector:@selector(test:) withObject:myal afterDelay:.9];
 
 }
+
+-(void)test:(UIAlertView*)x{
+    [x dismissWithClickedButtonIndex:-1 animated:YES];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

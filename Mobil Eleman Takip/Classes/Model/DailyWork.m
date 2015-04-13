@@ -10,4 +10,10 @@
 
 @implementation DailyWork
 
+- (NSArray<Optional> *)workDates{
+    if (!_workDates)
+        _workDates = [NSArray array];
+    return _workDates;
+}
+
 @end

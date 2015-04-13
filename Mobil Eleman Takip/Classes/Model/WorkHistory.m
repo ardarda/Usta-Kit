@@ -10,4 +10,11 @@
 
 @implementation WorkHistory
 
+- (NSArray *)dailyWorks{
+    if (!_dailyWorks) {
+        _dailyWorks = (NSArray<Optional, DailyWork> *)[NSArray array];
+    }
+    return _dailyWorks;
+}
+
 @end
