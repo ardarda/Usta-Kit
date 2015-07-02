@@ -35,6 +35,8 @@
         _currentDaySummary = [[DaySummary alloc] init];
         _currentDaySummary.date = [[Context sharedContext] dateStringFrom:_date];
     }
+    self.title = @"Gün Özeti Düzenle";
+    _lblDate.text = [self dateStringForUI:_date];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -87,6 +89,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     ShowWorkersViewController *showWorkersVC = [self.storyboard instantiateViewControllerWithIdentifier:@"Show Workers VC"];
     showWorkersVC.dailyWork = [_currentDaySummary.dailyWorks objectAtIndex:indexPath.row];
+    showWorkersVC.date = _date;
     [self.navigationController pushViewController:showWorkersVC animated:YES];
 }
 

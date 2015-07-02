@@ -58,6 +58,22 @@
     return [df stringFromDate:date];
 }
 
+- (NSString *)dateStringForUI:(NSDate *)date {
+    // Create date formatter
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"d MMMM yyyy EEEE"];
+    
+    // Set the locale as needed in the formatter (this example uses Japanese)
+    [dateFormat setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"tr_TR"]];
+    //    NSDateFormatter* df = [[NSDateFormatter alloc] init];
+    //    NSString *trFormatString = [NSDateFormatter dateFormatFromTemplate:@"dd MMM yyyy" options:0 locale:[NSLocale currentLocale]];
+    //    [df setDateFormat:trFormatString];
+    return [dateFormat stringFromDate:date];
+}
+
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

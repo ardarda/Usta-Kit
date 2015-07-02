@@ -9,7 +9,9 @@
 #import "BaseViewController.h"
 #import "ACFormContainerView.h"
 #import "Context.h"
-@interface DaySummaryViewController : BaseViewController<UITableViewDataSource, UITableViewDelegate>
+#import <FPPopover/FPPopoverController.h>
+
+@interface DaySummaryViewController : BaseViewController<UITableViewDataSource, UITableViewDelegate, FPPopoverControllerDelegate>
 
 @property (nonatomic, strong) NSDate *date;
 @property (weak, nonatomic) IBOutlet UIButton *btnBack;

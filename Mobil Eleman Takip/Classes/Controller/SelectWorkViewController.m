@@ -21,7 +21,7 @@
     // Do any additional setup after loading the view.
     UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addButtonHandler)];
     self.navigationItem.rightBarButtonItem = rightBarButtonItem;
-    
+    self.title = @"İş Seç";
 }
 
 - (void)viewWillAppear:(BOOL)animated {

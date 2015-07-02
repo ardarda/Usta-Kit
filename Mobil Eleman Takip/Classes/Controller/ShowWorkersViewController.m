@@ -10,6 +10,7 @@
 #import "NetworkManager.h"
 #import "WorkerListViewController.h"
 #import "ShowWorkersTableViewCell.h"
+#import "UILabel+dynamicSizeMe.h"
 
 @interface ShowWorkersViewController ()
 
@@ -42,13 +43,16 @@
     else {
         _todaysDate = [[Context sharedContext] dateStringFrom:todaysDate];
         todaysDateString = [df stringFromDate:todaysDate];
-        self.title = @"Bugun";
-        
     }
     
+    self.title = @"İşçi Seç";
+
     
     //    NSDate *localeDate = [_todaysDate str]
-    _lblDate.text = todaysDateString;
+    NSString *lblTop = [NSString stringWithFormat:@"%@ - %@", _dailyWork.name, [self dateStringForUI:_date]];
+    _lblDate.text = lblTop;
+    [_lblDate resizeToFit];
+
     
 //    _daySummary = [[Context sharedContext] getDaySummaryWith:_todaysDate];
     
@@ -77,6 +81,7 @@
         _currentWorkers = [NSMutableArray array];
     }
     [_formContainer initialize];
+    [_tableView reloadData];
 }
 
 - (void)viewWillDisappear:(BOOL)animated{

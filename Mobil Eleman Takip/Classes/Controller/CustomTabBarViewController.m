@@ -1,42 +1,35 @@
 //
-//  AddWorkViewController.m
+//  CustomTabBarViewController.m
 //  Mobil Eleman Takip
 //
-//  Created by Arda Cicek on 13/04/15.
+//  Created by Arda Cicek on 14/04/15.
 //  Copyright (c) 2015 Arda Cicek. All rights reserved.
 //
 
-#import "AddWorkViewController.h"
-#import "Context.h"
+#import "CustomTabBarViewController.h"
 
-@interface AddWorkViewController ()
+@interface CustomTabBarViewController ()
 
 @end
 
-@implementation AddWorkViewController
+@implementation CustomTabBarViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"İş Ekle";
-
+    
+    /**
+     after the first tests, this will become active I think, not so sure though
+    [self.viewControllers enumerateObjectsUsingBlock:^(UIViewController *vc, NSUInteger idx, BOOL *stop) {
+        vc.title = nil;
+        vc.tabBarItem.imageInsets = UIEdgeInsetsMake(5, 0, -5, 0);
+    }];
+    */
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - Handlers
-- (IBAction)btnSaveHandler:(id)sender {
-    Work *work = [[Work alloc] init];
-    work.name = _tfWorkName.text;
-    work.price = [NSNumber numberWithInteger:_tfWorkPrice.text.integerValue];
-    if([[Context sharedContext] addWork:work]){
-        [self showSelfDestructingAlert:@"İş Kaydedildi."];
-        _tfWorkPrice.text = @"";
-        _tfWorkName.text = @"";
-    }
 }
 
 /*

@@ -24,7 +24,7 @@
     }
     _lblWorkerName.text = _currentWorker.name;
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-
+    self.title = @"Çalışma Geçmişi";
 }
 
 

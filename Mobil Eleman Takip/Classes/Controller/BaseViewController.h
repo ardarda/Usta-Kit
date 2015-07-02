@@ -13,4 +13,6 @@
 
 - (void)showSelfDestructingAlert:(NSString *)message;
 - (NSString *)dateStringFrom:(NSDate *)date;
+- (NSString *)dateStringForUI:(NSDate *)date;
+
 @end

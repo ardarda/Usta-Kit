@@ -11,7 +11,7 @@
 #import "HTAutocompleteTextField.h"
 #import "UtilityMethods.h"
 
-#define kVerticalPadding 10
+#define kVerticalPadding -100
 
 @implementation ACFormContainerView
 
@@ -145,18 +145,25 @@
     double keyboardAnimationDuration = [_keyboardInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
     
     NSArray *constraints = self.superview.constraints;
-    NSLayoutConstraint *yConstraint;
+    NSLayoutConstraint *yConstraintTop;
+    NSLayoutConstraint *yConstraintBottom;
+
     for (NSLayoutConstraint *constraint in constraints) {
-        if (constraint.firstItem == self || constraint.secondItem == self)
-            if(constraint.firstAttribute == NSLayoutAttributeBottom /*|| constraint.firstAttribute == NSLayoutAttributeBottom|| constraint.firstAttribute == NSLayoutAttributeCenterY*/){
-                yConstraint = constraint;
-                break;
+        if (constraint.firstItem == self || constraint.secondItem == self) {
+            if(constraint.secondAttribute == NSLayoutAttributeTop /*|| constraint.firstAttribute == NSLayoutAttributeBottom|| constraint.firstAttribute == NSLayoutAttributeCenterY*/){
+                yConstraintBottom = constraint;
+            
+            } else if(constraint.secondAttribute == NSLayoutAttributeBottom /*|| constraint.firstAttribute == NSLayoutAttributeBottom|| constraint.firstAttribute == NSLayoutAttributeCenterY*/){
+                yConstraintTop = constraint;
             }
+        }
     }
     
-    if(yConstraint){
+    if(yConstraintTop){
 //        [self setTranslatesAutoresizingMaskIntoConstraints:NO];
-        yConstraint.constant += diffY;
+        yConstraintBottom.constant += diffY;
+        yConstraintTop.constant += diffY;
+
 //        yConstraint.constant = -100;
 
         [UIView animateWithDuration:0.25 delay:0

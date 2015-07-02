@@ -21,6 +21,7 @@
     // Do any additional setup after loading the view.
     _tfRate.type = kACTextFieldTypeCurrency;
     _tfPhone.type = kACTextFieldTypeCurrency;
+    self.title = @"İşçi Ekle";
 }
 
 - (IBAction)btnAddWorkerHandler:(id)sender {

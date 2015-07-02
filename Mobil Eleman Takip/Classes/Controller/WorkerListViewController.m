@@ -23,7 +23,7 @@
     [_tableView reloadData];
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     //    self.tableView.backgroundColor = [UIColor lightGrayColor];
-    
+    self.title =@"İşçiler";
 }
 
 - (void)viewWillAppear:(BOOL)animated {

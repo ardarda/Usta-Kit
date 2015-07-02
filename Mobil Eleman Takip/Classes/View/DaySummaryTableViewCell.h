@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface DaySummaryTableViewCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UILabel *lblWorkerName;
-@property (weak, nonatomic) IBOutlet UILabel *lblWorkerRate;
+@property (weak, nonatomic) IBOutlet UILabel *lblWorkName;
+@property (weak, nonatomic) IBOutlet UILabel *lblWorkerNumber;
+@property (weak, nonatomic) IBOutlet UIView *contentView;
 
 @end

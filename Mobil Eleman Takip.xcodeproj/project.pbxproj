@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		86BBF2BFCB6EC21B5031DB94 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACDA093AFDEFD6966D1D1C6B /* libPods.a */; };
+		B404D5F11AE184A3009C1B47 /* PopWorkersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B404D5F01AE184A3009C1B47 /* PopWorkersTableViewController.m */; };
 		B42D51821AAD755200D2B041 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B42D51811AAD755200D2B041 /* NetworkManager.m */; };
 		B430DA491AB8557700B32B20 /* DaySummary.m in Sources */ = {isa = PBXBuildFile; fileRef = B430DA481AB8557700B32B20 /* DaySummary.m */; };
 		B430DA4C1AB8731B00B32B20 /* DaySummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B430DA4B1AB8731B00B32B20 /* DaySummaryViewController.m */; };
@@ -61,6 +62,8 @@
 		B466B3FB1ADBDCE8005D203B /* ShowWorkersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B466B3FA1ADBDCE8005D203B /* ShowWorkersViewController.m */; };
 		B466B3FE1ADC000F005D203B /* ShowWorkersTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B466B3FD1ADC000F005D203B /* ShowWorkersTableViewCell.m */; };
 		B466B4011ADC2D09005D203B /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B466B4001ADC2D09005D203B /* FileManager.m */; };
+		B466B4041ADD0956005D203B /* CustomTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B466B4031ADD0956005D203B /* CustomTabBarViewController.m */; };
+		B466B4071ADD1411005D203B /* UILabel+dynamicSizeMe.m in Sources */ = {isa = PBXBuildFile; fileRef = B466B4061ADD1411005D203B /* UILabel+dynamicSizeMe.m */; };
 		B4C5A8DB1AC06AD30036847E /* WorkHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C5A8DA1AC06AD30036847E /* WorkHistoryViewController.m */; };
 		B4C5A8DE1AC06FFB0036847E /* WorkHistoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C5A8DD1AC06FFB0036847E /* WorkHistoryTableViewCell.m */; };
 		B4E0E1B91AAD79D5001660F0 /* WorkerListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E0E1B81AAD79D5001660F0 /* WorkerListTableViewCell.m */; };
@@ -84,6 +87,8 @@
 		324158FDE86A5269954AA24C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		ACDA093AFDEFD6966D1D1C6B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1D32EC5DBCBE5D15A04202E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		B404D5EF1AE184A3009C1B47 /* PopWorkersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopWorkersTableViewController.h; sourceTree = "<group>"; };
+		B404D5F01AE184A3009C1B47 /* PopWorkersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopWorkersTableViewController.m; sourceTree = "<group>"; };
 		B42D51801AAD755200D2B041 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetworkManager.h; path = Classes/NetworkManager.h; sourceTree = "<group>"; };
 		B42D51811AAD755200D2B041 /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetworkManager.m; path = Classes/NetworkManager.m; sourceTree = "<group>"; };
 		B430DA471AB8557700B32B20 /* DaySummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaySummary.h; sourceTree = "<group>"; };
@@ -186,6 +191,10 @@
 		B466B3FD1ADC000F005D203B /* ShowWorkersTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowWorkersTableViewCell.m; sourceTree = "<group>"; };
 		B466B3FF1ADC2D09005D203B /* FileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileManager.h; path = Classes/FileManager.h; sourceTree = "<group>"; };
 		B466B4001ADC2D09005D203B /* FileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FileManager.m; path = Classes/FileManager.m; sourceTree = "<group>"; };
+		B466B4021ADD0956005D203B /* CustomTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTabBarViewController.h; sourceTree = "<group>"; };
+		B466B4031ADD0956005D203B /* CustomTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTabBarViewController.m; sourceTree = "<group>"; };
+		B466B4051ADD1411005D203B /* UILabel+dynamicSizeMe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+dynamicSizeMe.h"; sourceTree = "<group>"; };
+		B466B4061ADD1411005D203B /* UILabel+dynamicSizeMe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+dynamicSizeMe.m"; sourceTree = "<group>"; };
 		B4C5A8D91AC06AD30036847E /* WorkHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkHistoryViewController.h; sourceTree = "<group>"; };
 		B4C5A8DA1AC06AD30036847E /* WorkHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkHistoryViewController.m; sourceTree = "<group>"; };
 		B4C5A8DC1AC06FFB0036847E /* WorkHistoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkHistoryTableViewCell.h; sourceTree = "<group>"; };
@@ -366,6 +375,8 @@
 		B4628FDC1AACA5D000476A32 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				B466B4051ADD1411005D203B /* UILabel+dynamicSizeMe.h */,
+				B466B4061ADD1411005D203B /* UILabel+dynamicSizeMe.m */,
 				B4628FDD1AACA5D000476A32 /* ACBaseViewController.h */,
 				B4628FDE1AACA5D000476A32 /* ACBaseViewController.m */,
 				B4628FDF1AACA5D000476A32 /* ACFormContainerView.h */,
@@ -458,6 +469,8 @@
 			children = (
 				B46290211AACB08400476A32 /* BaseViewController.h */,
 				B46290221AACB08400476A32 /* BaseViewController.m */,
+				B466B4021ADD0956005D203B /* CustomTabBarViewController.h */,
+				B466B4031ADD0956005D203B /* CustomTabBarViewController.m */,
 				B462902B1AACB56600476A32 /* MenuViewController.h */,
 				B462902C1AACB56600476A32 /* MenuViewController.m */,
 				B462902E1AAD710700476A32 /* WorkerListViewController.h */,
@@ -478,6 +491,8 @@
 				B466B3E81ADBC553005D203B /* AddWorkViewController.m */,
 				B466B3F91ADBDCE8005D203B /* ShowWorkersViewController.h */,
 				B466B3FA1ADBDCE8005D203B /* ShowWorkersViewController.m */,
+				B404D5EF1AE184A3009C1B47 /* PopWorkersTableViewController.h */,
+				B404D5F01AE184A3009C1B47 /* PopWorkersTableViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -647,6 +662,7 @@
 				B46290061AACA5D000476A32 /* ECFeedbackViewController.m in Sources */,
 				B46290181AACA78700476A32 /* BaseData.m in Sources */,
 				B430DA521AB8AD6700B32B20 /* WorkHistory.m in Sources */,
+				B466B4071ADD1411005D203B /* UILabel+dynamicSizeMe.m in Sources */,
 				B4628FA81AACA5B400476A32 /* AppDelegate.m in Sources */,
 				B46290001AACA5D000476A32 /* ACBaseRequest.m in Sources */,
 				B4628FFE1AACA5D000476A32 /* ACNetworkManager.m in Sources */,
@@ -659,6 +675,7 @@
 				B46290051AACA5D000476A32 /* ACTextField.m in Sources */,
 				B466B3E91ADBC553005D203B /* AddWorkViewController.m in Sources */,
 				B466B3F51ADBC6E2005D203B /* Work.m in Sources */,
+				B466B4041ADD0956005D203B /* CustomTabBarViewController.m in Sources */,
 				B462902D1AACB56600476A32 /* MenuViewController.m in Sources */,
 				B466B3EF1ADBC635005D203B /* EditDaySummaryTableViewCell.m in Sources */,
 				B4C5A8DE1AC06FFB0036847E /* WorkHistoryTableViewCell.m in Sources */,
@@ -683,6 +700,7 @@
 				B466B3FE1ADC000F005D203B /* ShowWorkersTableViewCell.m in Sources */,
 				B462901B1AACA79800476A32 /* Worker.m in Sources */,
 				B466B3EC1ADBC562005D203B /* SelectWorkViewController.m in Sources */,
+				B404D5F11AE184A3009C1B47 /* PopWorkersTableViewController.m in Sources */,
 				B466B4011ADC2D09005D203B /* FileManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -814,7 +832,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "Mobil Eleman Takip/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -831,7 +849,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "Mobil Eleman Takip/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

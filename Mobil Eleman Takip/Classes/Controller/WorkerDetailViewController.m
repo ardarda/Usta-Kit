@@ -24,6 +24,7 @@
 
     _tfNewAdvance.type = kACTextFieldTypeCurrency;
     [self fetchUnpaidDailyworks];
+    self.title = @"İşçi Bilgileri";
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -76,6 +77,7 @@
 
 - (IBAction)btnGiveAdvance:(id)sender {
     if (_tfNewAdvance.text.length>0) {
+        [_formContainer resign];
         _currentWorker.advance = [NSNumber numberWithInt:_currentWorker.advance.intValue + _tfNewAdvance.text.intValue];
         WorkerList *updateList = [[WorkerList alloc] init];
         updateList.workers = (NSArray<Worker> *)@[_currentWorker];

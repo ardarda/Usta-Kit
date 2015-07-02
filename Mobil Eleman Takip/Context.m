@@ -132,7 +132,7 @@
                                                        encoding:NSUTF8StringEncoding
                                                           error:&err];
     if(err){
-        //DDLogError(@"Cannot read file at path %@, err = %@", path, err);
+        //
     }
     else{
         return result;
@@ -252,17 +252,9 @@
 - (BOOL) addWorker:(Worker *) worker toListAtPath:(NSString *) path{
     WorkerList *list = [self getListAtPath:path];
     if(list){
-//        Worker *existingWorker = [self getCallerWithID:worker.id fromArray:list.workers];
-        
-//        if(existingWorker == nil){
             list.workers = (NSArray<Worker>*)[[list.workers mutableCopy] arrayByAddingObject:worker];
             [self writeList:list toPath:path];
             return YES;
-//        }
-//        else{
-//            DDLogError(@"Worker already exists!");
-//            return NO;
-//        }
     }
     else{
         WorkerList *list = [[WorkerList alloc] init];
@@ -275,22 +267,15 @@
 - (BOOL) addWork:(Work *) work toListAtPath:(NSString *) path{
     WorkList *list = [self getWorkListAtPath:path];
     if(list){
-        //        Worker *existingWorker = [self getCallerWithID:worker.id fromArray:list.workers];
-        
-        //        if(existingWorker == nil){
         list.works = (NSArray<Work>*)[[list.works mutableCopy] arrayByAddingObject:work];
         [self writeWorkList:list toPath:path];
+        
         return YES;
-        //        }
-        //        else{
-        //            DDLogError(@"Worker already exists!");
-        //            return NO;
-        //        }
-    }
-    else{
+    } else {
         WorkList *list = [[WorkList alloc] init];
         list.works = (NSArray<Work>*)@[work];
         BOOL success = [self writeWorkList:list toPath:path];
+        
         return success;
     }
 }
@@ -307,25 +292,18 @@
 
 - (BOOL) removeWork:(Work *) work fromListAtPath:(NSString *) path{
     WorkList *list = [self getWorkListAtPath:path];
-//    Work *existingWork = [self getCallerWithID:work.id fromArray:list.works];
-//    
-//    if(existingWorker == nil){
-//        DDLogError(@"Worker do not exists!");
-//        return NO;;
-//    }
-//    else{
-        NSMutableArray<Work> *newWorks = [list.works mutableCopy];
-        [newWorks removeObject:work];
-        WorkList *newList = [[WorkList alloc] init];
-        newList.works = newWorks;
-        return [self writeWorkList:newList toPath:path];
-//    }
+    NSMutableArray<Work> *newWorks = [list.works mutableCopy];
+    [newWorks removeObject:work];
+    WorkList *newList = [[WorkList alloc] init];
+    newList.works = newWorks;
+    
+    return [self writeWorkList:newList toPath:path];
 }
 
 - (BOOL) removeWorker:(Worker *) worker fromListAtPath:(NSString *) path{
     WorkerList *list = [self getListAtPath:path];
-   
     NSMutableArray<Worker> *newWorkers = [list.workers mutableCopy];
+    
     for (Worker *myWorker in list.workers) {
         if ([worker.name isEqualToString:myWorker.name]) {
             [newWorkers removeObject:myWorker];
@@ -333,6 +311,7 @@
     }
     WorkerList *newList = [[WorkerList alloc] init];
     newList.workers = [newWorkers copy];
+    
     return [self writeList:newList toPath:path];
 }
 
